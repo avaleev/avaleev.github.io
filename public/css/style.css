@@ -1,0 +1,110 @@
+html, body {
+    background-color: rgb(250, 250, 250);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.chat-window {
+    position: relative;
+    width: calc(60% - 10px);
+    max-height: 98%;
+    margin-left: 20%;
+    margin-top: 1%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .chat-window {
+        position: relative;
+        width: calc(90% - 10px);
+        max-height: 95%;
+        margin-left: 5%;
+        margin-top: 2.5%;
+    }
+}
+
+.chat-window > h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0 10px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.chat-window > form > input#u {
+    display: inline-block;
+    position: relative;
+    width: calc(30% - 23.5px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(250, 250, 250);
+    font-size: 16px;
+}
+
+.chat-window > form > input#m {
+    display: inline-block;
+    position: relative;
+    width: calc(70% - 47.5px);
+    padding: 10px 37.5px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(250, 250, 250);
+    font-size: 16px;
+}
+
+.chat-window > form > button {
+    position: relative;
+    z-index: 9;
+    float: right;
+    margin-top: -38px;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    background-color: rgba(220, 220, 220, 0.1);
+    color: rgb(50, 50, 50);
+}
+
+ul#messages {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    list-style: none;
+}
+
+li.chat-bubble {
+    position: relative;
+}
+
+li.chat-bubble > .chat-nickname {
+    position: absolute;
+    font-size: 10px;
+    bottom: -11px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+li.chat-bubble > .chat-message {
+    display: table;
+    max-width: 50%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
+    background-color: rgb(250, 250, 250);
+}
+
+li.chat-bubble.chat-to > .chat-message {
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    color: #fff;
+    background: rgb(0,105,208);
+background: linear-gradient(90deg, rgba(0,105,208,1) 0%, rgba(15,129,241,1) 100%);
+}
